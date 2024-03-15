@@ -3,7 +3,6 @@ on:
  push:
    tags-ignore:
      - '**'
- workflow_dispatch: {}
 jobs:
   go-releaser-branches:
     runs-on: ubuntu-latest
