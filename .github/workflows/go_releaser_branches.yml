@@ -1,8 +1,7 @@
 name: go_releaser_branches
 on:
- push:
-   tags-ignore:
-     - '*'
+  - push
+  - workflow_dispatch
 jobs:
   go-releaser-branches:
     runs-on: ubuntu-latest
