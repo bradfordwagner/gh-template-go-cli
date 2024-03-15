@@ -30,4 +30,4 @@ jobs:
           version: 1.24.0
           install-only: true
       - name: Goreleaser
-        run: task -t ./taskfiles/tasks/go_releaser.yml
+        run: task -t ./taskfiles/tasks/go_releaser.yml is_tag=false
