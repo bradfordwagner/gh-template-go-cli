@@ -2,7 +2,7 @@ name: go_releaser_branches
 on:
  push:
    tags-ignore:
-     - '**'
+     - '*'
 jobs:
   go-releaser-branches:
     runs-on: ubuntu-latest
