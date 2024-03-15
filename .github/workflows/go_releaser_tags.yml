@@ -4,7 +4,7 @@ on:
     tags:
       - '*'
 jobs:
-  go-releaser:
+  go-releaser-tags:
     runs-on: ubuntu-latest
     # container:
     #   image: quay.io/bradfordwagner/go-builder:2.6.0-debian_bullseye
