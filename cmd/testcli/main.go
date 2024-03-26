@@ -3,9 +3,11 @@ package main
 import (
 	"fmt"
 	"os"
+	"template_cli/internal/args"
 
 	"github.com/bradfordwagner/go-util/log"
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 var rootCmd = &cobra.Command{
@@ -24,11 +26,16 @@ var myVerb = &cobra.Command{
 	},
 }
 
+var defaultArgs args.Args
+
 func init() {
 	rootCmd.AddCommand(myVerb)
 }
 
 func main() {
+	// viper - environment variables
+	viper.AutomaticEnv()
+	viper.Unmarshal(&defaultArgs) // when verbs have divergent args this will need to be moved into cmd specific methods
 	// cobra
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, err)
