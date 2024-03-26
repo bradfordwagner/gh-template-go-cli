@@ -31,7 +31,7 @@ var defaultArgs args.Args
 func init() {
 	rootCmd.AddCommand(myVerb)
 	fs := myVerb.Flags()
-	flag_helper.CreateFlag(fs, &defaultArgs.HelloWorld, "hello_world", "h", "default_value", "hello world")
+	flag_helper.CreateFlag(fs, &defaultArgs.HelloWorld, "hello_world", "w", "default_value", "hello world")
 }
 
 func main() {
