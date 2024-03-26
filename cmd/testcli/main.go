@@ -22,7 +22,7 @@ var myVerb = &cobra.Command{
 	},
 	Run: func(cmd *cobra.Command, args []string) {
 		l := log.Log().With("cmd", "myVerb")
-		l.Info("hi friends")
+		l.With("args", defaultArgs).Info("hi friends")
 	},
 }
 

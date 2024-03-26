@@ -1,5 +1,5 @@
 package args
 
 type Args struct {
-	HelloWrold string `mapstructure:"HELLO_WORLD"`
+	HelloWorld string `mapstructure:"HELLO_WORLD"`
 }
