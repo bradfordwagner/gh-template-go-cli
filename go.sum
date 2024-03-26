@@ -47,6 +47,8 @@ github.com/bgentry/speakeasy v0.1.0/go.mod h1:+zsyZBPWlz7T6j88CTgSN5bM796AkVf0kB
 github.com/bketelsen/crypt v0.0.4/go.mod h1:aI6NrJ0pMGgvZKL1iVgXLnfIFJtfV+bKCoqOes/6LfM=
 github.com/bradfordwagner/go-util v0.20.0 h1:HjD/uh+cGOLywbo7ZWpPzW1LFsMOmWFLmHxj3xAQCqg=
 github.com/bradfordwagner/go-util v0.20.0/go.mod h1:sQJ5H5NXdFxqkaioVfczRJY2r1QWQqx+IJRzuLEDdaU=
+github.com/bradfordwagner/go-util v0.21.2 h1:qt9/i39pCQZmdTjMeODITtiGIH6dq2O+PIPQTPXDCmc=
+github.com/bradfordwagner/go-util v0.21.2/go.mod h1:FzHKOmCsOrgNG9gc3W8NFus3Uo1Ye9D5V9lfzepxAdQ=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/chzyer/logex v1.1.10/go.mod h1:+Ywpsq7O8HXn0nuIou7OrIPyXbp3wmkHB+jjWRnGsAI=
 github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e/go.mod h1:nSuG5e5PlCu98SY8svDHJxuZscDgtXS6KTTbou5AhLI=
