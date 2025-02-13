@@ -37,7 +37,7 @@ jobs:
         uses: mamezou-tech/buildpacks-action@master
         with:
           image: 'sample-java-maven-app'
-          path: 'samples/apps/java-maven/'
-          builder: 'cnbs/sample-builder:alpine'
-          buildpacks: 'samples/buildpacks/java-maven samples/buildpacks/hello-processes/ cnbs/sample-package:hello-universe'
+          builder: paketobuildpacks/builder-jammy-tiny
+          # path: ''
+          # buildpacks: 'samples/buildpacks/java-maven samples/buildpacks/hello-processes/ cnbs/sample-package:hello-universe'
           publish: false
