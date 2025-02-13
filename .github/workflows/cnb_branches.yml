@@ -33,11 +33,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           logout: false
-      - name: Build image
-        uses: mamezou-tech/buildpacks-action@master
+      - name: Pack Build
+        uses: dfreilich/pack-action@v2
         with:
-          image: 'sample-java-maven-app'
-          builder: paketobuildpacks/builder-jammy-tiny
-          # path: ''
-          # buildpacks: 'samples/buildpacks/java-maven samples/buildpacks/hello-processes/ cnbs/sample-package:hello-universe'
-          publish: false
+          args: 'build test_img --builder paketobuildpacks/builder-jammy-tiny'
