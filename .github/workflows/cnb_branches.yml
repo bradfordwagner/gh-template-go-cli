@@ -62,6 +62,6 @@ jobs:
       - name: Pack Build
         uses: dfreilich/pack-action@v2.1.1
         with:
-          args: |-
-            build ${{ fromJSON(needs.config-yaml.outputs.config).cnb.repo }}
+          args: |
+            build ${{ fromJSON(needs.config-yaml.outputs.config).cnb.repo }} \
             --builder paketobuildpacks/builder-jammy-tiny'
