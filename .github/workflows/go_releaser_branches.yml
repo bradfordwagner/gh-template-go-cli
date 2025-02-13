@@ -35,6 +35,6 @@ jobs:
           version: 1.24.0
           install-only: true
       - name: task=branches
-        run: ./bin/task -t ./taskfiles/tasks/go_releaser.yml is_tag=false
+        run: git status && ./bin/task -t ./taskfiles/tasks/go_releaser.yml is_tag=false
         env:
           GITHUB_TOKEN: ${{ github.token }} 
