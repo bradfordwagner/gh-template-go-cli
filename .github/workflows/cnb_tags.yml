@@ -6,10 +6,36 @@ on:
 env:
   version: ${{ github.ref_name }}
 jobs:
+  
+  config-yaml:
+    name: config.yaml
+    runs-on: arm64
+    outputs:
+      config: ${{ steps.config.outputs.config }}
+    steps:
+      - uses: actions/checkout@v4
+      # https://github.com/chrisdickinson/setup-yq/blob/latest/action.yml
+      - uses: chrisdickinson/setup-yq@v1.0.1
+        name: yq=v4.43.1
+        with:
+          yq-version: v4.43.1
+      - name: yq=version
+        run: yq --version
+      
+      - name: jq=1.7
+        uses: dcarbone/install-jq-action@v2
+        with:
+          version: 1.7
+      
+      - name: export=config
+        id: config
+        run: echo "config=$(yq -oj '.' config.yaml | jq -cr)" >> $GITHUB_OUTPUT
+  
   builds:
     runs-on: ubuntu-24.04
     permissions: write-all
     name: build
+    needs: config-yaml
     steps:
       - uses: actions/checkout@v4
       - name: dagger=0.15.2
