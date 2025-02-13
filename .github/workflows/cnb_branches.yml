@@ -64,4 +64,4 @@ jobs:
         with:
           args: |
             build ${{ fromJSON(needs.config-yaml.outputs.config).cnb.repo }}:${{ env.version }} \
-            --builder paketobuildpacks/builder-jammy-tiny
+            --builder ${{ fromJSON(needs.config-yaml.outputs.config).cnb.builder }} \
