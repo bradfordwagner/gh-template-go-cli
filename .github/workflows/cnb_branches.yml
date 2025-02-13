@@ -12,7 +12,7 @@ jobs:
   
   config-yaml:
     name: config.yaml
-    runs-on: arm64
+    runs-on: ubuntu-24.04
     outputs:
       config: ${{ steps.config.outputs.config }}
     steps:
