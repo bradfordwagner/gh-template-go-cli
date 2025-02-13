@@ -31,6 +31,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           logout: false
       - name: Pack Build
-        uses: dfreilich/pack-action@v2
+        uses: dfreilich/pack-action@v2.1.1
         with:
           args: 'build test_img --builder paketobuildpacks/builder-jammy-tiny'
